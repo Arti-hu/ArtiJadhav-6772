@@ -1,3 +1,5 @@
+//Program to reverse an integer array
+
 package Assignment;
 
 import java.util.Arrays;
@@ -15,8 +17,8 @@ public class Sort1
 			System.out.print(arr[i]+" ");
 		}
 		 
-		System.out.println("\nSort Array elements in descending order are:");
-		Arrays.sort(arr);		
+		System.out.println("\nSort Array elements in reverse order are:");
+				
 		for(int i=arr.length-1;i>=0;i--)
 		{
 			System.out.print(arr[i]+" ");

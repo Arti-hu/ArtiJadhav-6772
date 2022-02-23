@@ -9,8 +9,8 @@ public class String5
 	public static void main(String[] args) 
 	{
 		int count=0;
-		String s1="welcome to java to";
-		String s2="to";
+		String s1="welcome to java ";
+		String s2="welcome";
 		String[]str=s1.split(" ");
 		//String[]str2=s2.split("");
 	

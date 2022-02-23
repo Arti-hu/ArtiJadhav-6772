@@ -1,3 +1,5 @@
+//Program to find average of int arrays
+
 package Assignment;
 import java.util.*;
 

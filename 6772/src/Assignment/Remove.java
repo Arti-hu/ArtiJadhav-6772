@@ -1,3 +1,5 @@
+//Program to remove an element from int array
+
 package Assignment;
 import java.util.*;
 public class Remove 

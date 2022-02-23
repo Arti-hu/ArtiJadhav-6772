@@ -1,3 +1,5 @@
+//Java code to copy one array into another array
+
 package Assignment;
 import java.util.*;
 public class Copy

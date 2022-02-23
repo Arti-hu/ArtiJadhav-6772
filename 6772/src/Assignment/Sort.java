@@ -1,3 +1,5 @@
+//Program to sort an integer and string array
+
 package Assignment;
 import java.util.*;
 
@@ -22,24 +24,13 @@ public class Sort
     	  arr[i]=sc.nextInt();
       }
       System.out.println("Enter string array elements");
-      {
+      
     	  for(int i=0;i<a;i++)
           {
         	  arr1[i]=sc.next();
           }
-      }
-      System.out.println(" Integer array elements");
-    
-      for(int i=0;i<arr.length;i++)
-      {
-    	 System.out.print(arr[i]+ " ");
-      }
-      System.out.println(" \n String array elements");
       
-      for(int i=0;i<arr1.length;i++)
-      {
-    	 System.out.print(arr1[i]+ " ");
-      }
+    
      
       System.out.println("\nInteger Array Sorting in ascending order");
       Arrays.sort(arr);
