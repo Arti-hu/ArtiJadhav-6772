@@ -10,7 +10,7 @@ class AAA
 }
 interface StuInfo
 {
-	public default void display()
+	public static void display1()
 	{
 		int r=1;
 		String nm="Riya";
@@ -25,7 +25,7 @@ public class UsingDefault extends AAA implements StuInfo
 	public void display()
 	{
 		super.display();//AAA class
-		StuInfo.super.display(); ///Interface
+		
 		int r=1;
 		String nm="Riya";
 		System.out.println("Student roll number  "+r+"\nStudent name   "+nm);
@@ -38,6 +38,7 @@ public class UsingDefault extends AAA implements StuInfo
 		
 		UsingDefault u1=new UsingDefault();
 		u1.display();
+		StuInfo.display1(); /// static Interface
 
 	}
 

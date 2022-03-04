@@ -13,15 +13,15 @@ public class UserDefined1
 {
 	
 	
-   public void CheckAge(int age)throws MyClass
+   public void CheckName(String nm1,String nm2)throws MyClass
    {
-	   if(age<18)
+	   if(nm1.equals(" ")&&nm2.equals(" "))
 	   {
-		   throw new MyClass("Age must be greater than 18");
+		   throw new MyClass("Name should not be empty");
 	   }
 	   else
 	   {
-		   System.out.println("You are eligible for voting");
+		   System.out.println(nm1+nm2);
 	   }
    }
    
@@ -31,15 +31,18 @@ public class UserDefined1
 		UserDefined1 u1=new UserDefined1();
 		try
 		{
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter age");
-		 int age=sc.nextInt();
+    	Scanner sc=new Scanner(System.in);
+    	System.out.println("Enter First Name");
+		String nm1=sc.next();
 		 
-		 u1.CheckAge(age);
+		 System.out.println("Enter second Name");
+		 String nm2=sc.next();
+		 
+		 u1.CheckName(nm1,nm2);
 		}
 		catch(Exception e)
 		{
-			System.out.println("Age is less than 18");
+			//System.out.println("Age is less than 18");
 			e.printStackTrace();
 		}
 		 

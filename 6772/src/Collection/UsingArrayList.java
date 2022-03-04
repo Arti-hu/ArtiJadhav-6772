@@ -11,6 +11,8 @@ public class UsingArrayList
 		list.add(new String("Two"));
 		list.add(new String("Three"));
 		
+		
+		System.out.println(list);
 		System.out.println(list.get(0));
         System.out.println(list.get(1));
         System.out.println(list.get(2));

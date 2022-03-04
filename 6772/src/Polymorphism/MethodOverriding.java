@@ -4,9 +4,9 @@ package Polymorphism;
 class Area
 {
 	int z,ar;
-	public Area(int a)
+	public Area(int b)
 	{
-	    System.out.println("This is parent class constructor"+a);
+	    System.out.println("This is parent class constructor"+b);
 		
 	}
 	

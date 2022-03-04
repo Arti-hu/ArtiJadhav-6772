@@ -5,10 +5,11 @@ abstract class ABC
 	int a;
 	
 	
-	ABC()
+	public ABC()
 	{
 		System.out.println("This is a constructor");
 	}
+	
 	public int cal(int a, int b) //N
 	{
 		return a*b;

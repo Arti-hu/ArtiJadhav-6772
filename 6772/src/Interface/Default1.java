@@ -17,34 +17,35 @@ class C1
 interface I1
 {
 	int r=6;
-	public default void area()
+	public default void area1()
 	{
-		float ar;
-		ar=3.14f*r*r;
-	
-		//System.out.println("Area of circle is  "+ar);
-	}
-	
-	
-}
-public class Default1 extends C1 implements I1
-{
-	public void area()
-	{
-		super.area();
-		I1.super.area();
 		float ar;
 		ar=3.14f*r*r;
 	
 		System.out.println("Area of circle is  "+ar);
 	}
 	
+	
+}
+public class Default1 extends C1 implements I1
+{
+//	public void area()
+//	{
+//		super.area();
+//		//I1.super.area();
+//		float ar;
+//		ar=3.14f*r*r;
+//	
+//		System.out.println("Area of circle is  "+ar);
+//	}
+//	
 
 	public static void main(String[] args)
 	{
 		Default1 d1=new Default1();
 		d1.area();
 		d1.output();
+		d1.area1();
 		//d1.area1();
 	}
 

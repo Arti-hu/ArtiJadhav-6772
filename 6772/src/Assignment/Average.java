@@ -33,6 +33,7 @@ public class Average
 			
 		}
 	     int average=sum/n;
+	     
 	     System.out.println(average);
 		
 	}

@@ -13,6 +13,8 @@ public class UsingSet
 		s1.add(true);
 		s1.add("Arti");
 		
+		System.out.println(s1);
+		
 		Iterator itr=s1.iterator();
 		while(itr.hasNext())
 		{
