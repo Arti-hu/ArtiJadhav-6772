@@ -5,6 +5,7 @@ interface test
 	final int a=20;
 	abstract public void input();
 	
+	
 }
 
 interface test2    //Interface contains only constant values
