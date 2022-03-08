@@ -3,6 +3,7 @@ import java.util.*;
 public class EmployeeManagementSystem 
 {
 	int eid;
+	static int a;
 	String name,address,phno,dob,post,mail;
 	float sal;
 	
@@ -100,6 +101,7 @@ public class EmployeeManagementSystem
      {
 		char ch1;
 		String ename11="";
+		String ph1;
 		EmployeeManagementSystem e;
 		ArrayList<EmployeeManagementSystem>ar=new ArrayList();
 		 Scanner sc=new Scanner(System.in);
@@ -130,7 +132,8 @@ public class EmployeeManagementSystem
 
 		 				System.out.println("Add Employee");
 		 				System.out.println("Enter emp id");
-		 				int id=sc.nextInt();
+		 				int id=sc.nextInt();	
+		
 		 				System.out.println("Enter emp name");
 		 				String ename=sc.next();
 		 				if(ename.matches("^[A-Za-z]\\w{3,29}$"))
@@ -150,10 +153,14 @@ public class EmployeeManagementSystem
 		 				String ph=sc.next();
 		 				if(ph.matches("(0|91)?[7-9][0-9]{9}"))
 		 				{
+		 					e.setPhno(ph);
 		 				}
 		 				else
 		 				{
 		 					System.out.println("Invalid number");
+		 					System.out.println("Type Contact No.again");
+		 					ph1=sc.next();
+		 					e.setPhno(ph1);
 		 				}
 		
 		 				System.out.println("Enter DOB");
@@ -165,11 +172,14 @@ public class EmployeeManagementSystem
 		 				String email=sc.next();
 		 				if(email.matches("^[a-z0-9_!#$&'*+/=?'{|}~^.-]+@[a-z0-9.-]+$"))
 		 				{
-		
+		 					e.setMail(email);
 		 				}
 		 				else
 		 				{
 		 					System.out.println("Invalid email id");
+		 					System.out.println("Type EmailId again");
+		 					String email1=sc.next();
+		 					e.setMail(email1);
 		 				}
 		 				System.out.println("Enter Salary");
 		 				float sal=sc.nextFloat();
@@ -178,12 +188,14 @@ public class EmployeeManagementSystem
 		 				
 		 				//e.setName(ename11);
 		 				e.setAddress(addr);
-		 				e.setPhno(ph);
+		 				
 		 				e.setDob(dob);
 		 				e.setPost(post);
-		 				e.setMail(email);
+		 				
 		 				e.setSal(sal);
 		 				ar.add(e);
+		 				
+		 				
 		 				break;
  				case 2:     System.out.println("------------------------------------------------------Show Employee Details-----------------------------------------------------------------\n");
 		 				
@@ -243,7 +255,7 @@ public class EmployeeManagementSystem
 		 						String ename1=sc.next();
 		 						if(ename1.matches("^[A-Za-z]\\w{3,29}$"))
 				 				{
-				
+		 							e.setName(ename1);
 				 				}
 				 				else
 				 				{
@@ -255,7 +267,18 @@ public class EmployeeManagementSystem
 		 						System.out.println("Enter address");
 		 						String addr1=sc.next();
 		 						System.out.println("Enter Contact No");
-		 						String ph1=sc.next();
+		 						String ph2=sc.next();
+		 						if(ph2.matches("(0|91)?[7-9][0-9]{9}"))
+				 				{
+				 					e.setPhno(ph2);
+				 				}
+				 				else
+				 				{
+				 					System.out.println("Invalid number");
+				 					System.out.println("Type Contact No.again");
+				 					String ph3=sc.next();
+				 					e.setPhno(ph3);
+				 				}
 		 						System.out.println("Enter DOB");
 		 						String dob1=sc.next();
 		 						System.out.println("Enter Employee post");
@@ -263,18 +286,28 @@ public class EmployeeManagementSystem
 		
 		 						System.out.println("Enter Email id");
 		 						String email1=sc.next();
-		
+		 						if(email1.matches("^[a-z0-9_!#$&'*+/=?'{|}~^.-]+@[a-z0-9.-]+$"))
+				 				{
+				 					e.setMail(email1);
+				 				}
+				 				else
+				 				{
+				 					System.out.println("Invalid email id");
+				 					System.out.println("Type EmailId again");
+				 					String email2=sc.next();
+				 					e.setMail(email2);
+				 				}
 		 						System.out.println("Enter Salary");
 		 						float sal1=sc.nextFloat();
 		
 		 						e.setEid(ar.get(i).getEid());
-		 						e.setName(ename1);
+		 					
 		 					//	e.setName(ename12);
 		 						e.setAddress(addr1);
-		 						e.setPhno(ph1);
+		 						
 		 						e.setDob(dob1);
 		 						e.setPost(post1);
-		 						e.setMail(email1);
+		 						
 		 						e.setSal(sal1);
 		 						ar.set(i, e);
 		 						break;
@@ -287,20 +320,24 @@ public class EmployeeManagementSystem
 
  				break;
 
- 				case 5:    
+ 				case 5:     //e=new EmployeeManagementSystem();
 		 					System.out.println("Enter ID to delete Record");
 		 					int id2=sc.nextInt();
 		 					String nm3="Not Availavle";
+		 					
 		 					for(int i=0;i<ar.size();i++)
 		 					{
 		 						if(ar.get(i).getEid()==id2)
 		 						{
 		 							ar.remove(i);
-		 							nm3="Removed";
-		
-		 						} 	 
+		 							nm3="Removed";     	
+		 						} 	 	
+//		 						int a=ar.get(i+1).getEid();
+//		 						ar.get(i).setEid(a); 						
+//		 						
 		 					}
 		 					System.out.println(nm3);
+		 					
 		 					break;
 		
  				default:   System.out.println("Invalid input");	
