@@ -26,8 +26,8 @@ public class UsingDefault extends AAA implements StuInfo
 	{
 		super.display();//AAA class
 		
-		int r=1;
-		String nm="Riya";
+		int r=2;
+		String nm="Priya";
 		System.out.println("Student roll number  "+r+"\nStudent name   "+nm);
 		//StuInfo.super.display();	
 		

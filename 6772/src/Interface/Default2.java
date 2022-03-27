@@ -14,7 +14,7 @@ public class Default2
 
 	public static void main(String[] args) 
 	{
-	   Simple s1=new Simple()
+	   Simple s1=new Simple()             //Anonymous class
 		{
 		   public  void add(int a,int b)
 			{

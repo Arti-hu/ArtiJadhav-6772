@@ -48,15 +48,12 @@ class Stu1 implements Comparator<Student>
 class Stu2 implements Comparator<Student>
 {
 
-	public boolean equals(Student obj)
-	{
-		return false;
-		
-	}
+	
 	@Override
-	public int compare(Student o1, Student o2) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int compare(Student o1, Student o2) 
+	{
+		 return o1.name.compareTo(o2.name);
+		
 	}
 
 	

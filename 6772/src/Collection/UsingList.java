@@ -12,7 +12,7 @@ public class UsingList
 		list.add("Riya");
 		list.add("Arti");
 		list.add("Priya");
-		list.add("Pooja");
+		list.add(null);
 		
 //		for(int i=0;i<list.size();i++)
 //		{

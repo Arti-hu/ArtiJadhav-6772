@@ -23,7 +23,7 @@ class Area1 extends Area
 	public Area1(int a)
 	{
 			
-		super(a);
+		super(20);
 		 System.out.println("This is Child class constructor" +a);
 	}
 	

@@ -34,6 +34,8 @@ public String toString()
 		 Stream stream1=list.stream();
 		 stream1.forEach(a->System.out.println(a));//uses consumer
 		 
+		 
+		 
 		
 		
 		

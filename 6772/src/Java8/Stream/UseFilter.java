@@ -21,6 +21,17 @@ public class UseFilter
 		IntSummaryStatistics list2=list.stream().collect(Collectors.summarizingInt(i->i+i));
 		System.out.println(list2.getSum());
 		
+
+		List<String> list3=new ArrayList();
+		list3.add("Arti");
+		list3.add("null");
+		list3.add(null);
+		list3.add("Arti");
+		list3.add("Priya");
+		
+		//Set<String>set=list3.stream().filter(a->a.startsWith("A")).collect(Collectors.toSet());
+		Set<String>set1=list3.stream().collect(Collectors.toSet());
+		System.out.println(set1);
 		
 //		for(Integer i:list)
 //		{

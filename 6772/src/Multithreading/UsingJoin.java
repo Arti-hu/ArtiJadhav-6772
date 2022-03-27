@@ -6,7 +6,14 @@ class AA extends Thread
 		System.out.println("Thread A Start");
 		for(int i=0;i<=5;i++)
 		{
-			
+			try {
+				sleep(1000);
+			} 
+			catch (InterruptedException e) 
+			{
+				
+				e.printStackTrace();
+			}
 			System.out.println("Value of i in thread A "+i);
 		}
 		System.out.println("Thread A exit");
@@ -24,18 +31,7 @@ class BB extends Thread
 		System.out.println("Thread B exit");
 	}
 }
-class CC extends Thread
-{
-	public void run()
-	{
-		System.out.println("Thread C Start");
-		for(int i=0;i<=5;i++)
-		{
-			System.out.println("Value of i in thread C "+i);
-		}
-		System.out.println("Thread C exit");
-	}
-}
+
 public class UsingJoin 
 {
 
@@ -43,23 +39,19 @@ public class UsingJoin
 	{
 		AA a=new AA();
 		BB b=new BB();
-		CC c=new CC();
-		//a.start();
-		
-		b.start();
+		a.start();
 		try 
 		{
-			b.join();
+			a.join(5000);
 		} 
 		catch (InterruptedException e) 
 		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		a.start();
-		c.start();
 		
-
+		
+		b.start();
 	}
 
 }

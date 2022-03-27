@@ -12,6 +12,7 @@ public class Test
 		b=sc.next().charAt(0);
 		
 		System.out.println('a'+'b');
+		//System.out.println();
 
 	}
 

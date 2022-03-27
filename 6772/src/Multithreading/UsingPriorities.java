@@ -10,7 +10,7 @@ class S1 extends Thread
 		t.setName("MyThread");
 		
 		System.out.println("Thread s1 start");
-		t.setName("MyFirstThread");
+		t.setName("My First Thread  ");
 		for(int i=0;i<=5;i++)
 		{
 			System.out.println(t.getName()+i);
@@ -28,7 +28,7 @@ class S2 extends Thread
 	{
 		Thread t = new Thread();
 		System.out.println("Thread s2 start");
-		t.setName("MySecondThread");
+		t.setName("My Second Thread  ");
 		for(int i=0;i<=5;i++)
 		{
 			System.out.println(t.getName()+i);
@@ -44,7 +44,7 @@ class S3 extends Thread
 	{    
 		Thread t = new Thread();
 		System.out.println("Thread s3 start");
-		t.setName("MyThirdThread");
+		t.setName("My Third Thread  ");
 		for(int i=0;i<=5;i++)
 		{
 			System.out.println(t.getName()+i);

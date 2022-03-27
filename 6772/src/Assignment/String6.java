@@ -8,21 +8,34 @@ public class String6
 	{
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter string");
-		String s=sc.next();
-		String[]str=s.split("#",3);
-		for(int i=0;i<str.length;i++)
+		String s=sc.nextLine();
+		//	boolean s1=s.matches("#");
+		for(int i=1;i<s.length();i++) 
 		{
-			if(str[0].endsWith("")==(str[1].startsWith("")))
+			if(s.charAt(i)=='#')
 			{
-				
-				
+				if(s.charAt(i-1)==s.charAt(i+1))
+				{
+			      System.out.println("True");
+				}
+				else
+				{
+					System.out.println("false");
+				}
 			}
 		}
-		
-		
-		
-		
-		
+
+
+
+
+
 	}
 
+
+
+
+
+
 }
+
+
