@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 @Entity
@@ -16,7 +18,9 @@ public class Employee
 	@Column
 	private String empName;
 	
-	@ManyToMany(mappedBy="employee")
+	@JoinTable(joinColumns = @JoinColumn(name="projectID"), inverseJoinColumns=@JoinColumn(name="employeeId"))
+	@ManyToMany
+
 	List<Project> project;
 
 	public int getEmpId() {

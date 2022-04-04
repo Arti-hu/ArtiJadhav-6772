@@ -7,6 +7,7 @@
 
 
 <hibernate-configuration>
+
 	<session-factory>
 		<property name="hbm2ddl.auto">update</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
@@ -18,8 +19,16 @@
 		<property name="format_sql">true</property>
 		 <mapping class="com.Entity.Student"></mapping> 
 		<!-- <mapping class="com.table.Student11"></mapping>  -->
-		<!-- <mapping class="com.maping.Person"></mapping> <mapping class="com.maping.Account"></mapping> -->
+		<!-- <mapping class="com.maping.Person"></mapping> 
+		<mapping class="com.maping.Account"></mapping> -->
 		<!-- <mapping class="m2m.Employee" />
 		<mapping class="m2m.Project" /> -->
+		
+		<!-- <mapping class="np1.Department"/>
+		<mapping class="np1.Employee"/> -->
+		
+		<!-- <mapping class="nnp1.Class1"/>
+		<mapping class="nnp1.Student11"/> -->
+		
 	</session-factory>
 </hibernate-configuration>

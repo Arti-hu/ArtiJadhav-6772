@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.constructor.Laptop" id="laptop">
+	 <constructor-arg  value="HP"/>
+	  <constructor-arg  value="3"/>
+	   <constructor-arg  value="40000.00"/>
+	
+	</bean>
+	
+	<bean class="com.constructor.Laptop" id="laptop1">
+	  <constructor-arg  value="Dell"/>
+	  <constructor-arg  value="2"/>
+	  <constructor-arg  value="34000.00"/>
+	
+	</bean>
+</beans>

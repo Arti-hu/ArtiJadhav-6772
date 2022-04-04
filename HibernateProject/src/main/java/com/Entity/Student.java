@@ -18,14 +18,11 @@ public class Student
 	@Column
    String email;
    
+	@Column
+	int age;
    
    
-public Student(int rollno, String name, String email) {
-	super();
-	this.rollno = rollno;
-	this.name = name;
-	this.email = email;
-}
+
 public int getRollno() 
 {
 	return rollno;
@@ -50,6 +47,14 @@ public void setEmail(String email)
 {
 	this.email = email;
 }
+public int getAge(int age)
+{
+	return age;
+}
+public void setAge(int age)
+{
+	this.age=age;
+}
 public Student() 
 {
 	super();
@@ -59,7 +64,7 @@ public Student()
 @Override
 public String toString()
 {
-	return "Student [rollno=" + rollno + ", name=" + name + ", email=" + email + "]";
+	return "Student [rollno=" + rollno + ", name=" + name + ", email=" + email + ", age= "+age +"]";
 }
    
 
