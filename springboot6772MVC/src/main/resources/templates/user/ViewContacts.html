@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="user/base::Layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<section>
+ 
+  <h2 align="center" style="margin: 5% 0 4% 26%;">View Contacts</h2>
+  <div class="container" >
+     <table class="table" style="width:800px;">
+  <thead class="thead-light" >
+    <tr>
+      <th scope="col" >contactId</th>
+      <th scope="col">Person Name</th>
+      <th scope="col">Nick Name</th>
+      <th scope="col">Mobile No</th>
+       <th scope="col">Person Image</th>
+        <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="contact:${contactObj}">
+      <td th:text="${contact.contactId}"></td>
+      <td th:text="${contact.personName}"></td>
+      <td th:text="${contact.nickName}"></td>
+      <td th:text="${contact.mobileNo}"></td>
+      <td th:text="${contact.personImage}"></td>
+      <td><button type="button" class="btn btn-primary"><a href="#" style="color:white;">Update</a></button> | <button type="button" class="btn btn-primary"><a href="#" style="color:white;">delete</a></button></td>
+    </tr>
+   
+  </tbody>
+</table>
+
+
+  </div>
+</section>
+</body>
+</html>
