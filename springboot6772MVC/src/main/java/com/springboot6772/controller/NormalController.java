@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,13 +18,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.springboot6772.entity.User;
+import com.springboot6772.service.ContactService;
 import com.springboot6772.service.userService;
 
 @Controller
+
+
 public class NormalController 
 { 
 	@Autowired
 	userService userservice;
+	
 	
 	
 	/*
@@ -71,6 +76,8 @@ public class NormalController
 		
 		 if(user1!=null)
 		 {
+			 session.setAttribute("user", user);
+			 session.setAttribute("user1", user1);
 			 return "user/home";
 		 }
 		 else
@@ -78,7 +85,7 @@ public class NormalController
 	      session.setAttribute("message2", new Message("Invalid username and password !","alert-danger"));
 		 return "login";
 		 }
-//		 
+		 
 		
 		
 	 }
@@ -101,9 +108,11 @@ public class NormalController
 			
 		    if(agreement)
 			 {
+		    	
 				session.setAttribute("message1", new Message("User Is Registered Successfully !","alert-success"));
 				this.userservice.addUser(user);
-				return "signup";
+			
+				return "login";
 				
 			 }
 			 else
@@ -121,7 +130,7 @@ public class NormalController
 		}
 		
 		
-		 return "signup";
+		 return "login";
 		 
 	 }
 	

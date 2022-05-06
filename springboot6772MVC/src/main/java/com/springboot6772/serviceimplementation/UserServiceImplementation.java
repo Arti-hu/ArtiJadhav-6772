@@ -1,5 +1,7 @@
 package com.springboot6772.serviceimplementation;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,11 +31,14 @@ public class UserServiceImplementation implements userService
 	}
 
 	@Override
-	public User getUserByUserName(String userName)
-	{	
-		return userRepo.getUserByUserName(userName);
+	public List<User> getUsers() {
+		
+		return userRepo.findAll();
 	}
 
+	
+
+	
 	
 
 	

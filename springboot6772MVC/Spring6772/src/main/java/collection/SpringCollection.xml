@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="collection.Employee" id="employee">
+	     <property name="eid" value="1"/>
+	     <property name="name" value="Arti"/>
+	     <property name="project">
+	        <list>
+	           <value>Java</value>
+	           <value>CPP</value>
+	           <value>PHP</value>
+	           <value>Android</value>	        
+	        </list>  
+	     </property>                                                                                                                                                                                                                                                                                                                                                  
+	      
+	      <property name="mobile">
+	      <set>
+	        <value>9518301421</value>
+	         <value>9922680330</value>
+	         <value>9818301421</value> 
+	      </set>
+	      </property>
+	   
+	   <property name="email">
+	    <map>
+	      <entry key="1" value="arti@gmail.com"></entry>
+	     <entry key="2" value="avni@gmail.com"></entry>
+	      <entry key="3" value="arnav@gmail.com"></entry>
+	    </map>
+	   
+	   </property>
+	</bean>
+</beans>

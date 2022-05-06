@@ -28,29 +28,14 @@
 	crossorigin="anonymous"></script>
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" th:href="@{/css/style2.css}">
+	<link rel="stylesheet" th:href="@{/css/userstyle2.css}">
     <title th:text="${title}">Smart Contact Manager</title>
   </head>
   <body >
   
   
-   <!--Sidebar start  -->
-  <section class="sidebar">
-       
-       <a href="home" class="nav-link active"> <i class="fa-solid fa-house-chimney-user"></i> Home</a>
-       <a href="addcontact" class="nav-link active"> <i class="fas fa-pencil-alt"></i> Add Contact</a>
-       <a href="viewContacts" class="nav-link active"><i class="fas fa-id-card-alt"></i> View Contact</a>
-       <a href="#" class="nav-link active"><i class="fas fa-user-circle"></i> View Profile</a>
-       <a href="#" class="nav-link active"><i class="fas fa-cogs"></i> Settings</a>  
-       <div class="divider"></div>
-  </section>
-    <!-- sidebar end -->
-    
+ <nav class="navbar navbar-expand-sm navbar-blue bg-color fixed-top">
   
-  
-  
- <nav class="navbar navbar-expand-sm navbar-blue bg-color"  style="height: 60px;">
-  <div class="container-fluid">
     <a class="navbar-brand" href="#" style="font-size: 25px;" >Smart Contact Manager</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -59,7 +44,7 @@
       <ul class="navbar-nav ml-auto" style="font-size: 20px;" >
     
        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"><span th:text="${user.userName}"></span></a>
+          <a class="nav-link active" aria-current="page" href="#"><span th:text="${session.user.userName}"></span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/">Home</a>
@@ -73,15 +58,27 @@
       </ul>
      
     </div>
-  </div>
+
 </nav>
   
-      
   
+  
+   <!--Sidebar start  -->
+  <section class="sidebar">
+       
+       <a href="home" class="nav-link active"> <i class="fa-solid fa-house-chimney-user"></i> Home</a>
+       <a href="addcontact" class="nav-link active"> <i class="fas fa-pencil-alt"></i> Add Contact</a>
+       <a href="viewContacts" class="nav-link active"><i class="fas fa-id-card-alt"></i> View Contact</a>
+       <a href="viewProfile" class="nav-link active"><i class="fas fa-user-circle"></i> View Profile</a>
+       <a href="#" class="nav-link active"><i class="fas fa-cogs"></i> Settings</a>  
+       <div class="divider"></div>
+  </section>
+    <!-- sidebar end -->
+    
     
     <section class="content">
-         <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()" style="border: none;margin-top:3px;">☰</button>
-        <div th:replace="${content}"></div>
+      <div th:replace="${content}"></div>
+    
     </section>
     
   </body>

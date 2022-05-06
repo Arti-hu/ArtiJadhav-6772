@@ -1,5 +1,7 @@
 package com.springboot6772.service;
 
+import java.util.List;
+
 import com.springboot6772.controller.NormalController;
 import com.springboot6772.entity.Contact;
 import com.springboot6772.entity.User;
@@ -10,10 +12,6 @@ public interface userService {
 	
 	public User checkLogin(String userName,String password);
 	
-	public User getUserByUserName(String userName);
-	
-	
-	
-	
+	public List<User> getUsers();
 
 }
